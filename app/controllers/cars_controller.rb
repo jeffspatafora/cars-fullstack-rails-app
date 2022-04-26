@@ -21,5 +21,7 @@ class CarsController < ApplicationController
       color: params[:color],
     )
     car.save
+
+    redirect_to "/cars/#{car.id}"
   end
 end
