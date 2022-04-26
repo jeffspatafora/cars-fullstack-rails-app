@@ -1,10 +1,11 @@
 <p>cars index page</p>
 
 <% @cars.each do |car| %>
-  <p>id: <%= car.id%>
-  <p>make: <%= car.make%>
-  <p>model: <%= car.model%>
-  <p>year: <%= car.year%>
-  <p>color: <%= car.color%>
+  <p>id: <%= car.id%><p>
+  <p>make: <%= car.make%><p>
+  <p>model: <%= car.model%><p>
+  <p>year: <%= car.year%><p>
+  <p>color: <%= car.color%><p>
+  <a href="/cars/<%= car.id %>">go to this car</a>
   <hr/>
 <% end %>
