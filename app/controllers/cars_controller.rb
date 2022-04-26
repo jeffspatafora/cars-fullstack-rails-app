@@ -4,8 +4,22 @@ class CarsController < ApplicationController
     render "cars/index"
   end
 
+  def new
+    render "cars/new"
+  end
+
   def show
     @car = Car.find_by(id: params[:id])
     render "cars/show"
+  end
+
+  def create
+    car = Car.new(
+      make: params[:make], 
+      model: params[:model],
+      year: params[:year],
+      color: params[:color],
+    )
+    car.save
   end
 end
