@@ -1,0 +1,10 @@
+<p>cars index page</p>
+
+<% @cars.each do |car| %>
+  <p>id: <%= car.id%>
+  <p>make: <%= car.make%>
+  <p>model: <%= car.model%>
+  <p>year: <%= car.year%>
+  <p>color: <%= car.color%>
+  <hr/>
+<% end %>
